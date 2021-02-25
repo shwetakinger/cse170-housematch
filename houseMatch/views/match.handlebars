@@ -82,39 +82,27 @@
           </nav>
             <button type="button" id="sort" class="btn btn-secondary">Sort</button>
         </div>
-       
+
         <div class="items">
-            <div class="card" style="width: 100%">
-                <img class="card-img-top" src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o=" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">$1000/mo.</h5>
-                  <p class="card-text">Costa Verde Apartments.</p>
-           
-                  <div class="d-grid gap-2">
-                    <a href="/item.html" type="submit" class="btn btn-secondary" type="button"> View</a>
-                  </div>                
-                </div>
-              </div>
+          {{#each rooms}}
+          <div class="card" style="width: 100%">
+            <img class="card-img-top" src="{{img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{price}}</h5>
+              <p class="card-text">{{name}}</p>
 
-              <br>
-
-              <div class="card" style="width: 100%">
-                <img class="card-img-top" src="https://3l7op12xuwj665r13zqtai1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/09/victorian_junior_suite_king_ocean_view_balcony_18_rbenson_SANQQ_K1VOM_1080x590.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">$800/mo.</h5>
-                  <p class="card-text">Regents La Jolla</p>
-           
-                  <div class="d-grid gap-2">
-                    <a href="/item.html" type="submit" class="btn btn-secondary" type="button"> View</a>
-                  </div>                
-                </div>
-              </div>
+              <div class="d-grid gap-2">
+                <a href="roomDetails/{{name}}" type="submit" class="btn btn-secondary" type="button"> View</a>
+              </div> 
+            </div>
+          </div>
+          <br>
+          {{/each}}
         </div>
-
-
-        
         <br>
-        <br>     <br>     <br>
+        <br>     
+        <br>     
+        <br>
     </div>
 
 

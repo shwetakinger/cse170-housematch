@@ -1,0 +1,15 @@
+{
+	"items": [
+		{
+			"displayName": "CostaVerde",
+			"name": "Costa Verde Apartments",
+			"address": "8720 Costa Verde Blvd, San Diego, CA, 92122",
+			"price": "$1000/mo",
+			"type": "Single Room",
+			"bathroom": "Private Bathroom",
+			"keyFeatures": ["Pets Allowed", "Smoking Not Allowed", "Laundry Included"],
+			"additionalDetails":["5 mins to Vons", "Single person only", "Overnight guest only allowed on weekends"],
+			"img": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o="
+		}
+	]
+}

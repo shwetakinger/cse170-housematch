@@ -64,11 +64,7 @@
           width: 33.33%;
           font-family: Rokkitt;
           font-style: normal;
-<<<<<<< HEAD
-          
-=======
           font-size: 20px;
->>>>>>> fc28acc933e4ad610c26e82b348ca4e4bb6525ae
           text-align: center;
           
         }
@@ -137,46 +133,40 @@
   </div>
 </div>
 
+{{#items}}
 <div class="container">
     <div class="topbar">
-        <h1>Costa Verde Apartments</h1>
-        <p id="address">8720 Costa Verde Blvd, San Diego , 92122</p>
+        <h1>{{name}}</h1>
+        <p id="address">{{address}}</p>
         <i class="far fa-star"></i>
-        
-</div>
+    </div>
 
-<<<<<<< HEAD
-<div class="row" id = "info" style="width: 90%;">
-=======
 <div class="row" id = "info" style="width:90%">
->>>>>>> fc28acc933e4ad610c26e82b348ca4e4bb6525ae
   <div class= "column"  style="background-color:#A3CDFF;">
     <h2 >Monthly Rent</h2>
-    <p>$1000/month</p>
+    <p>{{price}}</p>
   </div>
   <div class="column"  style="background-color:#CCE3FD;"> 
     <h2 >Room Type</h2>
-    <p>Single</p>
+    <p>{{type}}</p>
   </div>
   <div class="column"  style="background-color:#F3F9FF;">
     <h2 >Bathroom</h2>   
-    <p>Private</p>
+    <p>{{bathroom}}</p>
   </div>
 </div>
 
 <hr>
-    
-<span class="badge rounded-pill bg-secondary text-light">Pets Allowed</span>
 
-<span class="badge rounded-pill bg-secondary text-light">Smoking Not Allowed</span>
-
-<span class="badge rounded-pill bg-secondary text-light">Laundry Included</span>
+{{#each keyFeatures}}    
+<span class="badge rounded-pill bg-secondary text-light">{{this}}</span>
+{{/each}}
 
 <hr>
 <h2>Additional Description</h2>
-<p>- 5 mins to Vons</p>
-<p>- Single person only</p>  
-<p>- Overnight guest only allowed on weekend</p>  
+{{#each additionalDetails}}
+<p>- {{this}}</p>
+{{/each}}
 
 
 
@@ -186,6 +176,8 @@
 <br>
 <br>
 <br>
+{{/items}}
+
 
 
 <div class="row">
@@ -221,8 +213,6 @@
        </div>
     </div>
 </div>
-
-
 
 
 
