@@ -6,11 +6,15 @@ var logger = require('morgan');
 var handlebars = require('express3-handlebars');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var login = require('./routes/login');
 var roomsMatched = require('./routes/roomsMatch');
 var roomDetails = require('./routes/roomDetails');
 
 var app = express();
+
+//view log in 
+app.get('/login', login.view);
+app.post('/login/auth', login.auth);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +37,8 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-
+app.get('/', index.view);
+app.get('/add', add.newUser);
 
 // error handler
 app.use(function(err, req, res, next) {

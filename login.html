@@ -138,6 +138,7 @@ h2 {
     ouseMatch</h2>
 
 
+<!-- <button onclick="document.getElementById('login').style.display='block'", style ="font-size: large;" >Login</button> -->
 <button onclick="document.getElementById('login').style.display='block'", style ="font-size: large;" >Login</button>
 <button onclick="document.getElementById('newuser').style.display='block'", style ="font-size: large;" >New User</button>
 <div id="login" class="modal">
@@ -150,12 +151,12 @@ h2 {
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="username" required>
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <button type="submit" style="align-content: center;">Login</button>
-      
-
+      <input type="password" placeholder="Enter Password" name="pass" required>
+      <!-- <button type="submit" style="align-content: center;">Login</button> -->
+      <!-- <a href="/home.html" type="submit" class="btn btn-secondary" type="button"> LOGIN</a> -->
+      <button onclick="location.href='/home.html'", type ="submit", style ="font-size: large; align-content: center;" class="login" >Login</button>
     </div>
 
     <div class="container" style="background-color:#0000">
@@ -165,6 +166,7 @@ h2 {
   </form>
 </div>
 
+<!-- Sign up form-->
 <div id="newuser" class="modal">
   
     <form class="modal-content animate" action="/action_page.php" method="post">
@@ -178,12 +180,10 @@ h2 {
         <p>Please fill in this form to create an account</p>
         <label for="uname"><b>Email:</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
         <label for="psw"><b>Create a password:</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="pass" required>
         <label for="psw"><b>Confirm your password:</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="passs" required>
         
           
         <button type="submit" style="align-content: center;">SIGN UP</button>
