@@ -8,22 +8,49 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-
     <title>HouseMatch - Home</title>
 
 
     <style>
         .find-room {
             margin-top: 25px;
-            background-color: rgb(189, 189, 189);
+            background-color: rgb(231, 231, 231);
             height: 25vh;
             border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            box-shadow: 4px 6px 6px rgb(172, 172, 172);
+            background: url("https://icons-for-free.com/iconfiles/png/512/search-131964784990705675.png");      
+            background-repeat: no-repeat;  
+            background-position: left;
+            background-size: 15vw;
+                
         }
 
+
+        .post-room{
+          margin-top: 25px;
+            background-color: rgb(231, 231, 231);
+            height: 25vh;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 4px 6px 6px rgb(172, 172, 172);
+            background: url("https://user-images.githubusercontent.com/24874033/33524225-4ed3895e-d83e-11e7-8549-066c96bbab6c.png");      
+            background-repeat: no-repeat;  
+            background-position: left;
+            background-size: 15vw;
+        }
+
+        .find-room:hover, .post-room:hover{
+          background-color: rgb(184, 184, 184);
+       
+        }
+
+
+       
         
     </style>
   </head>
@@ -33,27 +60,35 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="https://imgprd19.hobbylobby.com/c/c5/2a/cc52abfa8da556fd54cd7bebcdaf487bdbeeeaad/700Wx700H-191288-0320-px.jpg" alt="" width="30" height="24" class="d-inline-block align-top">
         HouseMatch
       </a>
     </div>
   </nav>
     <div class="container">
        
-        <a href="/preference.html">
-            <div class="find-room" style="background-color:#A3CDFF">
+        <a href="/preferences" style="color: black; text-decoration: none;">
+            <div class="find-room">
                 <h1>
                     FIND ROOM
                 </h1>
+             
+             
             </div>
+
+            
         </a>
        
 
-        <div class="find-room" style="background-color:#A3CDFF">
-            <h1>
+        
+            <a href="/sellerPreference" style="color: black; text-decoration: none;">
+                <div class="post-room">
+                <h1>
                 POST ROOM
             </h1>
-        </div>
+             </div>
+            </a>
+            
+       
 
         
 

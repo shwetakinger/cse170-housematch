@@ -93,11 +93,12 @@
     <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <!-- <a class="navbar-brand" href="#">
         <i class="fas fa-arrow-left"></i>
         
         
-      </a>
+      </a> -->
+      <a style="color: black;" href="/roomsMatched"><i class="fas fa-arrow-left"></i></a>
     </div>
 </nav>
 
@@ -164,9 +165,11 @@
 
 <hr>
 <h2>Additional Description</h2>
+<ul>
 {{#each additionalDetails}}
-<p>- {{this}}</p>
+<li>{{this}}</li>
 {{/each}}
+</ul>
 
 
 
@@ -182,12 +185,30 @@
 
 <div class="row">
     <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-outline-secondary" type="button" style = "color:#7FAFE7;">Send Message</button>
+        <a class="btn btn-outline-secondary" type="button" href="/sellerReview" style = "color:#7FAFE7;">View Profile
+
+        </a>
       </div>
     
     
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-secondary" type="button" style= "background-color:#7FAFE7; color:#F3F9FF">Contact Us</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">   Contact Us </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contact Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        6504555321 <br>
+        eric@ucla.edu 
+      </div>
+     
+    </div>
+  </div>
+</div>
       </div>
 </div>
 </div>
@@ -202,13 +223,19 @@
     <div class="container">
        <div class="row">
             <div class="col-4">
-              <i class="fas fa-home"></i>
+              <a href="/home" style="color: black;">
+                <i class="fas fa-home"></i>
+              </a>
+            </div>
+            <div class="col-4" >
+              <a href="/favorites" style="color: black;">
+                <i class="fas fa-star"></i>
+              </a>
             </div>
             <div class="col-4">
-              <i class="fas fa-star"></i>
-            </div>
-            <div class="col-4">
-              <i class="fas fa-user-alt"></i>
+               <a href="/profile" style="color: black;">
+                <i class="fas fa-user-alt"></i>
+              </a>
             </div>
        </div>
     </div>

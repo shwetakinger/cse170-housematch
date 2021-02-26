@@ -134,16 +134,16 @@ h2 {
 </style>
 </head>
 <body>
-<h2><img src="https://imgprd19.hobbylobby.com/c/c5/2a/cc52abfa8da556fd54cd7bebcdaf487bdbeeeaad/700Wx700H-191288-0320-px.jpg" alt="" width="30" height="24" class="d-inline-block align-top">
-    ouseMatch</h2>
+<h2>
+    HouseMatch</h2>
 
 
 <!-- <button onclick="document.getElementById('login').style.display='block'", style ="font-size: large;" >Login</button> -->
-<button onclick="document.getElementById('login').style.display='block'", style ="font-size: large;" >Login</button>
+<button onclick="document.getElementById('login').style.display='block'", style ="font-size: large;" type="button">Login</button>
 <button onclick="document.getElementById('newuser').style.display='block'", style ="font-size: large;" >New User</button>
 <div id="login" class="modal">
   
-  <form class="modal-content animate">
+  <div class="modal-content animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
       <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
@@ -155,21 +155,19 @@ h2 {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pass" required>
       <!-- <button type="submit" style="align-content: center;">Login</button> -->
-      <!-- <a href="/home.html" type="submit" class="btn btn-secondary" type="button"> LOGIN</a> -->
-      <button onclick="location.href='/home'" type ="submit" style ="font-size: large; align-content: center;">Login<button>
+      <button onclick="location.href='/home'" type="submit" class="btn btn-secondary" type="button"> LOGIN</button>
     </div>
 
     <div class="container" style="background-color:#0000">
       <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
-      <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
     </div>
-  </form>
+  </div>
 </div>
 
 <!-- Sign up form-->
 <div id="newuser" class="modal">
   
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="modal-content animate">
       <div class="imgcontainer">
         <span onclick="document.getElementById('newuser').style.display='none'" class="close" title="Close Modal">&times;</span>
         <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
@@ -186,27 +184,28 @@ h2 {
         <input type="password" placeholder="Enter Password" name="passs" required>
         
           
-        <button type="submit" style="align-content: center;">SIGN UP</button>
+       <!--  <button type="submit" style="align-content: center;">SIGN UP</button> -->
+       <button onclick="location.href='/home'" type="submit" style="align-content: : center;" type="button"> SIGN UP</button>
 
       </div>
   
       <div class="container" style="background-color:#f1f1f1">
         <button onclick="document.getElementById('confirm').style.display='block'", class="cancelbtn" >Cancel</button>
       </div>
-    </form>
+    </div>
   </div>
 
   <!-- Confirmation if you want to close this tab -->
   <div id="confirm" class="modal">
 
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate">
       
   
       <div class="container">
         <h1>Are you sure you want to close this tab? </h1>
         <p>All your information will be erased</p>
         <button type="button" onclick="document.getElementById('newuser').style.display='none'; document.getElementById('confirm').style.display='none'"  class="cancelbtn" style = "background-color: green;" >Yes, Sure</button>
-        <button type="button" onclick="document.getElementById('confirm').style.display='none'" class="cancelbtn">No, I change my mind</button>
+        <button type="button" onclick="document.getElementById('confirm').style.display='none'" class="cancelbtn">No, I changed my mind</button>
 
       </div>
     </form>
