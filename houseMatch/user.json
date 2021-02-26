@@ -1,0 +1,16 @@
+{
+	"user": [
+		{
+			"id": "1",
+            "email": "lkl007@ucsd.edu",
+            "pass": "1234",
+            "name": "Linh Le"
+            },
+        {
+            "id": "2",
+            "email": "aungyang@ucsd.edu",
+            "pass": "1234",
+            "name": "Aung Yang"
+        }
+	]
+}
