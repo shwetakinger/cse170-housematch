@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var handlebars = require('express3-handlebars');
-
+var http = require('http'); 
 var indexRouter = require('./routes/index');
 var login = require('./routes/login');
 var roomsMatched = require('./routes/roomsMatch');
@@ -46,7 +46,7 @@ app.get('/', login.view);
   res.end('fail');
 
 }) */
-
+app.set('port', process.env.PORT || 3000);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
@@ -90,3 +90,7 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
