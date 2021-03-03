@@ -22,7 +22,7 @@
             position: relative;
         }
         .far.fa-star{
-            position: absolute;
+            position: relative;
             top: 0px;
             right: 0px;
             padding-top: 5px;
@@ -49,13 +49,7 @@
           text-align: center;
         }
         #info{
-          width:1000px;
-          height:100px;
-          border:1px
-           solid#AEAEAE;
-          background:#F3F9FF
-
-         
+          width: 90%;
         }
         
         .column{
@@ -64,7 +58,7 @@
           width: 33.33%;
           font-family: Rokkitt;
           font-style: normal;
-          font-size: 20px;
+          
           text-align: center;
           
         }
@@ -82,8 +76,9 @@
         }
         
         .btn btn-secondary {
-          background:#7FAFE7;;
+          background:#CCE3FD;;
         }
+
         
 
     </style>
@@ -137,18 +132,18 @@
         <i class="far fa-star"></i>
     </div>
 
-<div class="row" id = "info" style="width:90%">
-  <div class= "column"  style="background-color:#A3CDFF;">
-    <h2 >Monthly Rent</h2>
-    <p>{{price}}</p>
+<div class="row" id = "info">
+  <div class= "column"  style="background-color:#A3CDFF; ">
+    <h2 style = "font-size: large;">Monthly Rent</h2>
+    <p style = "font-size: medium;">{{price}}</p>
   </div>
-  <div class="column"  style="background-color:#CCE3FD;"> 
-    <h2 >Room Type</h2>
-    <p>{{type}}</p>
+  <div class="column"  style="background-color:#CCE3FD; "> 
+    <h2 style = "font-size: large;">Room Type</h2>
+    <p style = "font-size: medium;"> {{type}}</p>
   </div>
-  <div class="column"  style="background-color:#F3F9FF;">
-    <h2 >Bathroom</h2>   
-    <p>{{bathroom}}</p>
+  <div class="column"  style="background-color:#F3F9FF; ">
+    <h2 style = "font-size: large;">Bathroom</h2>   
+    <p style = "font-size: medium;">{{bathroom}}</p>
   </div>
 </div>
 
@@ -187,7 +182,7 @@
     
     
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">   Contact Us </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #CCE3FD;">  Contact Us </button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
