@@ -81,7 +81,6 @@
                 $("#search-bar").keypress(function(event) { 
                   if (event.keyCode === 13) { 
                     console.log("clicked!");
-                    //$("#GFG_Button").click(); 
                   } 
                 }); 
               </script>  
@@ -98,52 +97,25 @@
               <p class="card-text">{{name}}</p>
 
               <div class="d-grid gap-2">
-                <a href="roomDetails/{{name}}" type="submit" class="btn btn-primary" type="button"> View</a>
+                <a href="roomDetails/{{name}}" type="submit" class="btn btn-primary" type="button"> View
+                </a>
               </div> 
+
             </div>
           </div>
+
           <br>
           {{/each}}
         </div>
+
         <br>
         <br>     
         <br>     
         <br>
     </div>
 
+    {{> footer}}
 
-    <div class="footer">
-        <div class="container">
-           <div class="row">
-
-                <div class="col-4">
-                  <a href="/home" style="color: black;">
-                <i class="fas fa-home"></i>
-              </a>
-                </div>
-                <div class="col-4">
-                  <a href="/favorites" style="color: black;">
-                <i class="fas fa-star"></i>
-              </a>
-                </div>
-                <div class="col-4">
-                 <a href="/profile" style="color: black;">
-                <i class="fas fa-user-alt"></i>
-              </a>
-                </div>
-           </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
