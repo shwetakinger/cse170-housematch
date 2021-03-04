@@ -17,6 +17,8 @@ var sellerPreference = require('./routes/sellerPreference');
 var favorites = require('./routes/favorites');
 var userProfile = require('./routes/profile');
 
+var userFavorites = require("./favorites.json");
+
 // var usersRouter = require('./routes/users');
 
 var app = express();
@@ -61,13 +63,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/roomsMatched', roomsMatched);
-app.use('/roomDetails/:name', roomDetails);
+app.use('/roomDetails', roomDetails);
 app.use('/home', home);
 app.use('/preferences', preferences);
 app.use('/sellerReview', sellerReview);
 app.use('/sellerPreference', sellerPreference);
 app.use('/favorites', favorites);
 app.use('/profile', userProfile);
+
+app.post('/addFavorite', function(req, res){
+	console.log(req);
+	// console.log('in');
+	var fullFavorite = req.body.location + " -" + req.body.address;
+	console.log(fullFavorite);
+	userFavorites.favorites.push(fullFavorite);
+	return;
+
+});
+
+app.post('/removeFavorite', function(req, res){
+	var fullFavorite = req.body.location + " -" + req.body.address;
+	console.log(fullFavorite);
+	var favoriteItem = userFavorites.favorites.indexOf(fullFavorite);
+	userFavorites.favorites.splice(favoriteItem, 1);
+
+	return;
+
+});
 
 
 // catch 404 and forward to error handler

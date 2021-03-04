@@ -31,14 +31,14 @@
 
     <div style="text-align: center">
        <h2>Favorites </h2>  
-       <div class="profile">   
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Regents La Jolla</li>
-            <li class="list-group-item">International Gardens</li>
-            <li class="list-group-item">Costa Verde Apartments</li>
-          </ul>
-        </div>  
-    </div>
+       <div class="profile">
+        <ul class="list-group list-group-flush">
+          {{#each favorites}}
+          <li class="list-group-item">{{this}}</li>
+          {{/each}}
+        </ul>
+       </div>
+       
 
     {{> footer}}
 

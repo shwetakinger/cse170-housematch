@@ -1,6 +1,7 @@
 'use strict';
 $(document).ready(function() {
 	$(".favorite").click(favoriteListener);
+	// init page so favorited icon stays bold on load
 })
 
 function favoriteListener(e){
@@ -8,6 +9,7 @@ function favoriteListener(e){
 	console.log('in favorite!');
 	$(this).find("i").toggleClass("far fas selected-star border-star");
 	if($(this).find("i").hasClass("selected-star")){
+		alert("Added room to favorite rooms!");
 		var roomLocation = $(".room-heading").text();
 		var roomAddress = $("#address").text();
 		console.log(roomLocation, roomAddress);
@@ -18,8 +20,9 @@ function favoriteListener(e){
 			type: 'POST',
 			data: jsonData
 		})
-		alert("Added room to favorite rooms!");
+		
 	}else{
+		alert("Removed room from favorite rooms!");
 		var roomLocation = $(".room-heading").text();
 		var roomAddress = $("#address").text();
 		console.log(roomLocation, roomAddress);
@@ -30,7 +33,7 @@ function favoriteListener(e){
 			type: 'POST',
 			data: jsonData
 		})
-		alert("Removed room from favorite rooms!");
+		
 	}
 	
 }
