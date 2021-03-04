@@ -22,6 +22,15 @@
           color: black;
           text-align: center;
         }
+    button {
+      background-color: #A3CDFF;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
     </style>
 
     <title>HouseMatch - Preference</title>
@@ -29,14 +38,25 @@
   <body>
 
     <div style="text-align: center">
-        <h2>User Profile </h2>  
-        <div class="profile">   
-          <h1>Student</h1>   
-          <p class="title">Economics, Junior</p>   
-          <p>UC San Diego</p>  
-        </div>  
+        <h2>User Profile </h2>
+        <div class="profile">
+          <h1>Student</h1>
+          <p class="title">Economics, Junior</p>
+          <p>UC San Diego</p>
+        </div>
     </div>
-  
+
+
+     <div class="container">
+        <div class="row justify-content-center">
+				  <div class="col-4">
+					  <button type="button" class="btn btn-danger btn-large fa fa-sign-out" onclick="window.location.href='/'"> Logout</button>
+				  </div>
+        </div>
+      </div>
+
+
+
     
     {{> footer}}
 
