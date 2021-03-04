@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="../../js/item.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -21,12 +23,15 @@
         .topbar{
             position: relative;
         }
-        .far.fa-star{
+
+        .favorite{
             position: absolute;
-            top: 0px;
+            top: 20px;
             right: 0px;
             padding-top: 5px;
             font-size: 25px;
+            width: 50px;
+            color: gold;
         }
 
         h1{
@@ -41,7 +46,6 @@
           position: fixed;
           left: 0;
           bottom: 0;
-          height: 50px;
           padding-top: 10px;
            width: 100%;
             background-color: rgb(238, 238, 238);
@@ -82,7 +86,20 @@
         }
         
         .btn btn-secondary {
-          background:#7FAFE7;;
+          background:#7FAFE7;
+        }
+
+        .title{
+          margin-right: 50%;
+        }
+
+        .border-star{
+          color: gold;
+          font-size: 21px;
+        }
+        .selected-star{
+          color: gold;
+          font-size: 22px;
         }
         
 
@@ -94,6 +111,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <a style="color: black;" href="/roomsMatched"><i class="fas fa-arrow-left"></i></a>
+      <span class="title">Room Details<span>
     </div>
 </nav>
 
@@ -129,12 +147,16 @@
   </div>
 </div>
 
-{{#items}}
+
 <div class="container">
     <div class="topbar">
-        <h1>{{name}}</h1>
+        <h1 class="room-heading">{{name}}</h1>
         <p id="address">{{address}}</p>
-        <i class="far fa-star"></i>
+        <div class="favorite">
+          <i class="far fa-star border-star"></i>
+        </div>
+        
+        
     </div>
 
 <div class="row" id = "info" style="width:90%">
@@ -174,7 +196,7 @@
 <br>
 <br>
 <br>
-{{/items}}
+
 
 
 
@@ -197,8 +219,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        6504555321 <br>
-        eric@ucla.edu 
+        {{contactNumber}} <br>
+        {{contactEmail}}
       </div>
      
     </div>
@@ -218,9 +240,7 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
 crossorigin="anonymous"></script>
