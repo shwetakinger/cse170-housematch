@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery.js"></script>
 
+  {{> lato}}
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
@@ -19,6 +20,8 @@
 
         html, body{
             height: 100%;
+            font-family: 'Lato', sans-serif;
+  
         }
         .topbar{
             position: relative;
@@ -96,7 +99,7 @@
               <p class="card-text">{{name}}</p>
 
               <div class="d-grid gap-2">
-                <a href="roomDetails/{{name}}" type="submit" class="btn btn-primary" type="button"> View
+                <a href="roomDetails/{{name}}" type="submit" class="btn btn-md" style="color: white; background-color: #A3CDFF" type="button"> View
                 </a>
               </div> 
 
