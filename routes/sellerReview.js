@@ -1,10 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var reviews = require("../reviews.json");
 
 
-/* GET home page. */
-exports.view = router.get('/', function(req, res, next) {
-  res.render('sellerReview');
-});
-
-module.exports = router;
+exports.view = function(request, response){
+	response.render('sellerReview', reviews);
+}

@@ -22,6 +22,12 @@
           color: black;
           text-align: center;
         }
+
+        .asterisk{
+          color: red;
+          font-size:18px;
+        }
+        
     </style>
 
     <title>HouseMatch - Preference</title>
@@ -32,52 +38,53 @@
     
     <div class="container">
         <h1>Select Preferences</h1>
-        <span>* indicates required fields
+        <span style="color: red;">* indicates required fields</span>
         <form onsubmit="window.location.href = 'roomsMatched'; return false;">
-          <h4>Room Type *</h4>
+          <h4>Room Type  <span class="asterisk">*</span></h4>
           <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
               required>
-              <label class="form-check-label">
+              <label class="form-check-label" for="flexRadioDefault1">
                 Single
               </label>
           </div>
           <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-              <label class="form-check-label">
+              <label class="form-check-label" for="flexRadioDefault2">
                 Double
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-              <label class="form-check-label">
+              <label class="form-check-label" for="flexRadioDefault3">
                 No Preference
               </label>
             </div>
 
             <br>
-              <h4>Bathroom *</h4>
+              <h4>Bathroom  <span class="asterisk">*</span></h4>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4" required>
-                <label class="form-check-label">
+                <label class="form-check-label" for="flexRadioDefault4">
                   Private
                 </label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
-                <label class="form-check-label">
+                <label class="form-check-label" for="flexRadioDefault5">
                   Shared
                 </label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault6">
-                <label class="form-check-label">
+                <label class="form-check-label" for="flexRadioDefault6">
                   No Preference
                 </label>
               </div>
               <br>
 
-              <h4>Furnish *</h4>
+              <h4>Furnished  <span class="asterisk">*</span>
+              </h4>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7"
                 required>
@@ -99,7 +106,8 @@
               </div>
               <br>
 
-              <h4>COVID-19 Conscious *</h4>
+              <h4>COVID-19 Conscious 
+               <span class="asterisk">*</span></h4>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault10"required>
                 <label class="form-check-label" for="flexRadioDefault10">
@@ -120,7 +128,7 @@
               </div>
               <br> 
 
-              <h4>Occupants *</h4>
+              <h4>Occupants  <span class="asterisk">*</span></h4>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault13"required>
                 <label class="form-check-label" for="flexRadioDefault13">
@@ -148,7 +156,8 @@
               </div>
               <br>
 
-              <h4>Gender *</h4>
+              <h4>Gender  <span class="asterisk">*</span>
+              </h4>
 
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault17"required>
@@ -170,7 +179,8 @@
               </div>
 
               <br>
-              <h4>Price Range *</h4>
+              <h4>Price Range 
+               <span class="asterisk">*</span></h4>
               <div class="mb-3">
                   <label for="min" class="form-label">Min</label>
                   <input type="text" class="form-control" required>
@@ -184,13 +194,6 @@
           
           <div class="d-grid gap-2" style="padding-left: 1px; padding-right: 1px;">
             <input type="submit" value="Start Matching" class="btn btn-primary" style="width: 100%">  
-            <!-- <script>
-              function goToMatchedRooms() {
-                console.log("in!!");
-                window.location.href="/roomsMatched";
-              }
-            </script> -->
-            
           </div>
 
         </form>

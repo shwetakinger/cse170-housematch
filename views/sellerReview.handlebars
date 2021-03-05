@@ -68,6 +68,10 @@
         padding-right: 12px;
       }
 
+      .review-container{
+        margin-bottom: 10px;
+      }
+
       .bg-success{
         margin: 2px;
       }
@@ -116,6 +120,26 @@
            <i><b>Reviewed by James</b></i> 
           </p>
 
+          <form method="get" action="/addReview">
+            <div>
+              {{#each reviews}}
+              <p class="review-entry review-container">{{description}}
+              </p>
+              <p>Reviewed by: {{name}}</p>
+              {{/each}}
+              <hr>
+            </div>
+            <h3 style="align-content: left">Add a review</h3>
+            <div class="form-group">
+              <label for="description">Review Description:</label>
+              <input type="text" class="form-control" id="description" placeholder="Description" name="description">
+            </div>
+            <div class="form-group">
+              <label for="description">Reviewer Name:</label>
+              <input type="text" class="form-control" id="description" placeholder="Description" name="reviewer">
+            </div>
+            <input type="submit" id="submitBtn" class="btn btn-primary" style="background-color: #79b4fd; margin-bottom: 30px; margin-top: 10px" value="Add review"></input>
+          </form>
         
 
     </div>

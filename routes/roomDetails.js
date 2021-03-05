@@ -9,7 +9,7 @@ exports.view = router.get('/:name', function(req, res, next) {
   console.log("name: ", name);
   
   data["items"].forEach(function(item, index){
-    //console.log(item);
+    console.log(item);
   	if(item.name == name){
       res.render('item', data["items"][index]);
     }

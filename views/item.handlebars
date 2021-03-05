@@ -94,9 +94,11 @@
         .selected-star{
           color: gold;
           font-size: 22px;
-          background:#CCE3FD;;
         }
 
+        .room-info, .location {
+          margin-left: 10px;
+        }
         
 
     </style>
@@ -147,15 +149,15 @@
 <div class="container">
     <div class="topbar">
         <h1 class="room-heading">{{name}}</h1>
-        <p id="address">{{address}}</p>
-        <div class="favorite">
+        <p id="address" class="location">{{address}}</p>
+        <div class="favorite row">
           <i class="far fa-star border-star"></i>
         </div>
         
         
     </div>
 
-<div class="row" id = "info">
+<div class="row room-info" id = "info">
   <div class= "column"  style="background-color:#A3CDFF; ">
     <h2 style = "font-size: large;">Monthly Rent</h2>
     <p style = "font-size: medium;">{{price}}</p>
@@ -205,7 +207,7 @@
     
     
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #CCE3FD;">  Contact Us </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">  Contact Us </button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

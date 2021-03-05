@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../js/img.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -22,6 +23,10 @@
           color: black;
           text-align: center;
         }
+        .asterisk{
+          color: red;
+          font-size:18px;
+        }
     </style>
 
     <title>HouseMatch - Preference</title>
@@ -31,164 +36,132 @@
   {{> navbar}}
     
     <div class="container">
-        <h1>Select Preferences</h1>
-        <form>
-            <h4>Room Type</h4>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <h1>Select Room Details</h1>
+        <span style="color: red;">* indicates required fields</span>
+        <!-- role="form" method="get" action="/add" -->
+        <form method="get" action="/rooms">
+          <h4>Room Type 
+            <span class="asterisk">*</span>
+          </h4>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="roomType" id="flexRadioDefault1"
+              required value="Single">
               <label class="form-check-label" for="flexRadioDefault1">
                 Single
               </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+          </div>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="roomType" id="flexRadioDefault2"
+              value="Double">
               <label class="form-check-label" for="flexRadioDefault2">
                 Double
               </label>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-              <label class="form-check-label" for="flexRadioDefault3">
-                No Preference
-              </label>
-            </div>
 
-
-              <br>
-              <h4>Bathroom</h4>
+            <br>
+              <h4>Bathroom 
+               <span class="asterisk">*</span></h4>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
+                <input class="form-check-input" type="radio" name="bathroom" id="flexRadioDefault4" required value="Private">
                 <label class="form-check-label" for="flexRadioDefault4">
                   Private
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault5">
+                <input class="form-check-input" type="radio" name="bathroom" id="flexRadioDefault5"
+                value="Shared">
                 <label class="form-check-label" for="flexRadioDefault5">
                   Shared
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault6">
-                <label class="form-check-label" for="flexRadioDefault6">
-                  No Preference
-                </label>
-              </div>
               <br>
 
-              <h4>Furnish</h4>
+              <h4>Furnished 
+               <span class="asterisk">*</span></h4>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault7">
+                <input class="form-check-input" type="radio" name="furnished" id="flexRadioDefault7"
+                required value="Furnished">
                 <label class="form-check-label" for="flexRadioDefault7">
                   Furnished
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault8">
+                <input class="form-check-input" type="radio" name="furnished" id="flexRadioDefault8"
+                value="Unfurnished">
                 <label class="form-check-label" for="flexRadioDefault8">
                   Unfurnished
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault9">
-                <label class="form-check-label" for="flexRadioDefault9">
-                  No Preference
-                </label>
-              </div>
               <br>
 
-              <h4>COVID-19 Conscious</h4>
+              <h4>COVID-19 Conscious  <span class="asterisk">*</span>
+              </h4>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault10">
+                <input class="form-check-input" type="radio" name="covid" id="flexRadioDefault10" required value="Yes">
                 <label class="form-check-label" for="flexRadioDefault10">
                   Yes
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault11">
+                <input class="form-check-input" type="radio" name="covid" id="flexRadioDefault11"
+                value="No">
                 <label class="form-check-label" for="flexRadioDefault11">
                   No
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault12">
+                <input class="form-check-input" type="radio" name="covid" id="flexRadioDefault12"
+                value="No Preference">
                 <label class="form-check-label" for="flexRadioDefault12">
                   No Preference
                 </label>
               </div>
-              <br>
+              <br> 
 
-              <h4>Occupants</h4>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault13">
-                <label class="form-check-label" for="flexRadioDefault13">
-                  1-2
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault14">
-                <label class="form-check-label" for="flexRadioDefault14">
-                  3-5
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault15">
-                <label class="form-check-label" for="flexRadioDefault15">
-                  5-7
-                </label>
-              </div>
-
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault16">
-                <label class="form-check-label" for="flexRadioDefault16">
-                  No Preference
-                </label>
-              </div>
-              <br>
-
-              <h4>Gender</h4>
-
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault17">
-                <label class="form-check-label" for="flexRadioDefault17">
-                  Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault18">
-                <label class="form-check-label" for="flexRadioDefault18">
-                  Female
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault19">
-                <label class="form-check-label" for="flexRadioDefault19">
-                  No Preference
-                </label>
+              <h4>Number of Occupants
+               <span class="asterisk">*</span></h4>
+              <div class="mb-3">
+                  <input type="text" class="form-control" name="occupants" required>
               </div>
 
               <br>
-              <h4>Price Range</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="min" class="form-label">Min</label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="mb-3">
-                  <label for="max" class="form-label">Max</label>
-                  <input type="text" class="form-control" >
-                </div>
-                
-              </form>
+
+              <br>
+              <h4>Rent per month in USD  <span class="asterisk">*</span>
+              </h4>
+              <div class="mb-3">
+                  <input type="text" class="form-control" name="price" required>
+              </div>
+              <br>
+
+              <h4>Neighborhood or Apartment Name  <span class="asterisk">*</span>
+              </h4>
+              <div class="mb-3">
+                  <input type="text" class="form-control" name="location" required>
+              </div>
+              <br>
+
+              <h4>Address  <span class="asterisk">*</span>
+              </h4>
+              <div class="mb-3">
+                  <input type="text" class="form-control" name="address" required>
+              </div>
+              <br>
+
+              <h4>Additional Description</h4>
+              <div class="mb-3">
+                  <input type="text" class="form-control" name="additionalDescription">
+              </div>
+
+
              
-          <label for="avatar">Upload Pictures of Room:</label>
-          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="margin-bottom: 10px;">
-
-
+          <!-- <h4>Upload Pictures of Room:</h4>
+          <br>
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="margin-bottom: 10px;" onchange="loadFile(event)"> -->
 
             <div class="d-grid gap-2" style="padding-left: 1px; padding-right: 1px;">
-                <a href="/roomsMatched" type="submit" class="btn btn-primary" type="button"> Post Room for Rent</a>
-              </div>
+            <input type="submit" value="Post Room for Rent" class="btn btn-primary" style="width: 100%">  
+          </div>
               <br>
               <br>
               <br>

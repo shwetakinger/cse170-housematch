@@ -20,7 +20,8 @@ var sellerReview = require('./routes/sellerReview');
 var sellerPreference = require('./routes/sellerPreference');
 var favorites = require('./routes/favorites');
 var userProfile = require('./routes/profile');
-
+var roomsForRent = require('./routes/rooms');
+var addedReview = require('./routes/addedReview');
 
 var userFavorites = require("./favorites.json");
 
@@ -57,7 +58,7 @@ app.use('/roomsMatched', roomsMatched);
 app.use('/roomDetails', roomDetails);
 app.use('/home', home);
 app.use('/preferences', preferences);
-app.use('/sellerReview', sellerReview);
+app.use('/sellerReview', sellerReview.view);
 app.use('/sellerPreference', sellerPreference);
 app.use('/favorites', favorites);
 app.use('/profile', userProfile);
@@ -81,6 +82,9 @@ app.post('/removeFavorite', function(req, res){
 	return;
 
 });
+
+app.get('/rooms', roomsForRent.view);
+app.get('/addReview', addedReview.view);
 
 
 // catch 404 and forward to error handler
