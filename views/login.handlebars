@@ -3,12 +3,24 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {{> lato}}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    
   <script src="introHCI.js"></script>
+
+  
+
   <style>
+
+    body{
+      font-family: 'Lato', sans-serif;
+    }
     /* body {font-family: Arial, Helvetica, sans-serif;} */
     /* Full-width input fields */
     input[type=text],
@@ -93,7 +105,7 @@
       cursor: pointer;
     }
     h2 {
-      margin-top: 180px;
+      margin-top: 10%;
       text-align: center;
       position: relative;
     }
@@ -133,11 +145,21 @@
 
 <body>
   <h2>HouseMatch</h2>
+  
+  <div class ="container">
+    <div class = "row justify-content-center" >
+        <img src="../images/bluelogo2.png"  id="logo" alt="logo" width="60%">
+    </div>
+    
+    <div class = "row justify-content-center" >
+      <button onclick="document.getElementById('login').style.display='block'" , style="font-size: large; max-width:50%;"type="button">Login</button>
+    </div>
 
-  <button onclick="document.getElementById('login').style.display='block'" , style="font-size: large;"
-    type="button">Login</button>
-  <button onclick="document.getElementById('newuser').style.display='block'" , style="font-size: large;">New
-    User</button>
+    <div class = "row justify-content-center">
+      <button onclick="document.getElementById('newuser').style.display='block'" , style="font-size: large; max-width: 50%;">Sign Up</button>
+    </div>
+  </div>
+  
   <div id="login" class="modal">
 
     <div class="modal-content animate">
@@ -151,15 +173,15 @@
         <input id="email" type="text" placeholder="Enter Username" name="username" required>
         <label for="psw"><b>Password</b></label>
         <input id="password" type="password" placeholder="Enter Password" name="pass" required>
-        <!-- <button type="submit" style="align-content: center;">Login</button> -->
-        {{!-- <button onclick="location.href='/home'" id="submit" type="submit" class="btn btn-secondary" type="button">
-          LOGIN</button> --}}
-        <button type="button" class="btn btn-primary btn-md" id="submit">login <i class="fa fa-sign-in"></i></button>
+        <div class = "row justify-content-center">
+          <button type="button" class="btn btn-primary btn-md" id="submit" style="max-width: 40%;">LOGIN <i class="fa fa-sign-in"></i></button>
+        </div>
+        
       </div>
 
       <div class="container" style="background-color:#0000">
         <button type="button" onclick="document.getElementById('login').style.display='none'"
-          class="cancelbtn">Cancel</button>
+          class="cancelbtn" style="background-color: #ff5a55;">Cancel</button>
       </div>
     </div>
   </div>
@@ -178,9 +200,9 @@
         <h1>Sign Up </h1>
         <p>Please fill in this form to create an account</p>
         <label for="uname"><b>Email:</b></label>
-        <input id="email" type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" placeholder="Enter Email" name="email" required>
         <label for="psw"><b>Create a password:</b></label>
-        <input id="password" type="password" placeholder="Enter Password" name="pass" required>
+        <input type="password" placeholder="Enter Password" name="pass" required>
         <label for="psw"><b>Confirm your password:</b></label>
         <input type="password" placeholder="Enter Password" name="passs" required>
 
@@ -191,27 +213,14 @@
 
       </div>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <button onclick="document.getElementById('confirm').style.display='block'" , class="cancelbtn">Cancel</button>
-      </div>
+      <div class="container" >
+ <button type="button"
+          onclick="document.getElementById('newuser').style.display='none'; document.getElementById('confirm').style.display='none'"
+          class="cancelbtn" style="background-color: #ff5a55;">Cancel</button>      </div>
     </div>
   </div>
 
-  <!-- Confirmation if you want to close this tab -->
-  <div id="confirm" class="modal">
-    <form class="modal-content animate">
-      <div class="container">
-        <h1>Are you sure you want to close this tab? </h1>
-        <p>All your information will be erased.</p>
-        <button type="button"
-          onclick="document.getElementById('newuser').style.display='none'; document.getElementById('confirm').style.display='none'"
-          class="cancelbtn" style="background-color: green;">Yes, Sure</button>
-        <button type="button" onclick="document.getElementById('confirm').style.display='none'" class="cancelbtn">No, I
-          changed my mind</button>
 
-      </div>
-    </form>
-  </div>
 
 
 </body>
