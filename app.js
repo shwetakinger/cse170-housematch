@@ -69,7 +69,7 @@ app.post('/addFavorite', function(req, res){
 	var fullFavorite = req.body.location + " -" + req.body.address;
 	console.log(fullFavorite);
 	userFavorites.favorites.push(fullFavorite);
-	return;
+	//return;
 
 });
 
@@ -79,7 +79,7 @@ app.post('/removeFavorite', function(req, res){
 	var favoriteItem = userFavorites.favorites.indexOf(fullFavorite);
 	userFavorites.favorites.splice(favoriteItem, 1);
 
-	return;
+	//return;
 
 });
 

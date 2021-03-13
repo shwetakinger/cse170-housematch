@@ -150,14 +150,19 @@
   </div>
 </div>
 
-
 <div class="container">
     <div class="topbar">
         <h1 class="room-heading">{{name}}</h1>
         <p id="address" class="location">{{address}}</p>
+        {{#if isFavorited}}
+        <div class="favorite row">
+          <i class="fa-star fas selected-star"></i>
+        </div>
+        {{else}}
         <div class="favorite row">
           <i class="far fa-star border-star"></i>
         </div>
+        {{/if}}
         
         
     </div>

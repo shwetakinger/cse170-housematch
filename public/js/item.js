@@ -1,8 +1,10 @@
 'use strict';
 $(document).ready(function() {
 	$(".favorite").click(favoriteListener);
-	// init page so favorited icon stays bold on load
+	
 })
+
+
 
 function favoriteListener(e){
 	e.preventDefault();
@@ -14,6 +16,7 @@ function favoriteListener(e){
 		var roomAddress = $("#address").text();
 		console.log(roomLocation, roomAddress);
 		var jsonData = JSON.stringify({location: roomLocation, address: roomAddress});
+		window.location.reload();
 		$.ajax({
 			url: '/addFavorite',
 			contentType: 'application/json',
@@ -27,6 +30,7 @@ function favoriteListener(e){
 		var roomAddress = $("#address").text();
 		console.log(roomLocation, roomAddress);
 		var jsonData = JSON.stringify({location: roomLocation, address: roomAddress});
+		window.location.reload();
 		$.ajax({
 			url: '/removeFavorite',
 			contentType: 'application/json',

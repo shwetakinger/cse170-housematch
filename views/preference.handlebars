@@ -39,6 +39,10 @@
           font-size: 18px;
           
         }
+
+        .field-msg{
+          margin-top: 10px;
+        }
         
     </style>
 
@@ -51,6 +55,7 @@
     <div class="container">
         <h1>Select Preferences</h1>
         <span style="color: red;">* indicates required fields</span>
+        {{!-- <form onsubmit="checkForm();"></form> --}}
         <form onsubmit="window.location.href = 'roomsMatched'; return false;">
           <h4>Room Type  <span class="asterisk">*</span></h4>
           <div class="form-check">
@@ -209,13 +214,13 @@
               <h4>Price Range 
                <span class="asterisk">*</span></h4>
               <div class="mb-3">
-                  <label for="min" class="form-label">Min</label>
-                  <input type="text" class="form-control" id="min_value" required>
-                  <div id="msg"></div>
+                  <label for="min" class="form-label">Min Price ($)</label>
+                  <input type="number" class="form-control" id="min_value" required min="1">
+                  <div id="msg" class="field-msg"></div>
                 </div>
                 <div class="mb-3">
-                  <label for="max" class="form-label">Max</label>
-                  <input type="text" class="form-control" id="max_value" required>
+                  <label for="max" class="form-label">Max Price ($)</label>
+                  <input type="number" class="form-control" id="max_value" required min="1">
               </div> 
 
          
