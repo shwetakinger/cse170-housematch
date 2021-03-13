@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="../../js/img.js"></script>
 
     {{> lato}}
@@ -125,7 +126,7 @@
               <h4>Number of Occupants
                <span class="asterisk">*</span></h4>
               <div class="mb-3">
-                  <input type="text" class="form-control" name="occupants" required>
+                  <input type="number" class="form-control" name="occupants" required>
               </div>
 
               <br>
@@ -134,7 +135,7 @@
               <h4>Rent per month in USD  <span class="asterisk">*</span>
               </h4>
               <div class="mb-3">
-                  <input type="text" class="form-control" name="price" required>
+                  <input type="number" class="form-control" name="price" required>
               </div>
               <br>
 
@@ -159,9 +160,9 @@
 
 
              
-          <!-- <h4>Upload Pictures of Room:</h4>
+          <h4>Upload Pictures of Room:</h4>
           <br>
-          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="margin-bottom: 10px;" onchange="loadFile(event)"> -->
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="margin-bottom: 10px;" onchange="loadFile(event)">
 
             <div class="d-grid gap-2" style="padding-left: 1px; padding-right: 1px;">
             <input type="submit" value="Post Room for Rent" class="btn btn-primary" style="width: 100%">  

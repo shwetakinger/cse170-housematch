@@ -16,8 +16,9 @@ exports.view = function (request, response) {
   	obj["price"] = "$" + request.query.price + "/mo";
   }
   //obj["img"] = localStorage.getItem('imgData');
-  obj["img"] = "https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o=";
-
+  //obj["img"] = "https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o=";
+  obj["img"] = "";
+  obj["imgId"] = "id1";
   data.rooms.push(obj);
 
   // update items json

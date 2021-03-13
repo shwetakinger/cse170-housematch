@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="../../js/img.js"></script>
 
   {{> lato}}
     <!-- Bootstrap CSS -->
@@ -208,17 +210,18 @@
                <span class="asterisk">*</span></h4>
               <div class="mb-3">
                   <label for="min" class="form-label">Min</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" id="min_value" required>
+                  <div id="msg"></div>
                 </div>
                 <div class="mb-3">
                   <label for="max" class="form-label">Max</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" id="max_value" required>
               </div> 
 
          
           
           <div class="d-grid gap-2" style="padding-left: 1px; padding-right: 1px;">
-            <input type="submit" value="Start Matching" class="btn btn-lg"  style="width: 100%; color: white; background-color: #A3CDFF">  
+            <input type="submit" id="submit_check" value="Start Matching" class="btn btn-lg"  style="width: 100%; color: white; background-color: #A3CDFF">  
             <!-- <script>
               function goToMatchedRooms() {
                 console.log("in!!");

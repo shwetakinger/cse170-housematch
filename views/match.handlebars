@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../../js/matchedRooms.js" defer></script>
+    
 
   {{> lato}}
     <!-- Bootstrap CSS -->
@@ -93,7 +95,7 @@
         <div class="items">
           {{#each rooms}}
           <div class="card" style="width: 100%">
-            <img class="card-img-top" src="{{img}}" alt="Card image cap">
+            <img class="card-img-top" src="{{img}}" alt="Card image cap" id="{{imgId}}">
             <div class="card-body">
               <h5 class="card-title">{{price}}</h5>
               <p class="card-text">{{name}}</p>
@@ -118,7 +120,7 @@
 
     {{> footer}}
 
-
+  
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

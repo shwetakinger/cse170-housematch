@@ -3,12 +3,14 @@
 		{
 			"name": "Costa Verde Apartments",
 			"price": "$1000/mo",
-			"img": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o="
+			"img": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/65638324.jpg?k=1e6c5650d7e45f4ecab961bca77fdaf269e3acaf51e4313b94e3cff03d8b10ed&o=",
+			"imgId": "1"
 		},
 		{
 			"name": "Regents La Jolla",
 			"price": "$800/mo",
-			"img": "https://3l7op12xuwj665r13zqtai1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/09/victorian_junior_suite_king_ocean_view_balcony_18_rbenson_SANQQ_K1VOM_1080x590.jpg"
+			"img": "https://3l7op12xuwj665r13zqtai1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/09/victorian_junior_suite_king_ocean_view_balcony_18_rbenson_SANQQ_K1VOM_1080x590.jpg",
+			"imgId": "2"
 
 		}
 	]
