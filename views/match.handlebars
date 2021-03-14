@@ -58,6 +58,10 @@
         .search-container{
           margin-top: 10px;
         }
+
+        .search-box{
+          border-radius: 0px;
+        }
        
       
     </style>
@@ -70,8 +74,9 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a style="color: black;" href="/preferences"><i class="fas fa-arrow-left"></i></a>
-           <span class="match-header">Explore Rooms</span>
-
+          <div style="margin: 0 auto;">
+            <span>Explore Rooms</span>
+          </div>
           
         </div>
       </nav>
@@ -80,14 +85,15 @@
         <div class="topbar">
           <nav class="navbar navbar-light search-container">
             <form class="form-inline">
-              <input class="form-control form-control-sm mr-sm-2" id="search-bar" type="search" placeholder="Search" aria-label="Search">
-              <script>  
-                $("#search-bar").keypress(function(event) { 
-                  if (event.keyCode === 13) { 
-                    console.log("clicked!");
-                  } 
-                }); 
-              </script>  
+              <div class="form-outline" style="display: inline-flex;">
+                <input type="search" id="form1" class="form-control search-box" placeholder="Search"
+                />
+                <button type="button" class="btn btn-primary search-box" onclick="searchRooms()">
+                  <i class="fas fa-search"></i>
+                </button>
+                </div>
+                
+                <div id="search-msg" style="margin-top: 10px;"></div>
             </form>
           </nav>
         </div>
@@ -101,7 +107,7 @@
               <p class="card-text">{{name}}</p>
 
               <div class="d-grid gap-2">
-                <a href="roomDetails/{{name}}" type="submit" class="btn btn-md" style="color: white; background-color: #A3CDFF" type="button"> View
+                <a href="roomDetails/{{name}}" type="submit" class="btn btn-md" style="color: black; background-color: #A3CDFF" type="button"> View
                 </a>
               </div> 
 

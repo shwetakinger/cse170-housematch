@@ -1,4 +1,5 @@
 'use strict';
+
 document.addEventListener("DOMContentLoaded", ()=>{
     var dataImages = localStorage.getItem('imgData');
     if(dataImages){
@@ -21,3 +22,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // }
     
 });
+
+function searchRooms(){
+    console.log('in search fn');
+    document.getElementById('search-msg').innerHTML = "Search results for: " + document.getElementById("form1").value;
+    document.getElementById("search-msg").style.color = 'blue';
+    
+}
